@@ -14,20 +14,13 @@ class StringBuilder {
     return this._value;
   }
   append(str) {
-    const arr = Array.from(this._value);
-    arr.push(str);
-    return (this._value = arr.join(""));
+    this._value += str;
   }
   prepend(str) {
-    const arr = Array.from(this._value);
-    arr.unshift(str);
-    return (this._value = arr.join(""));
+    this._value = str + this._value;
   }
   pad(str) {
-    const arr = Array.from(this._value);
-    arr.unshift(str);
-    arr.push(str);
-    return (this._value = arr.join(""));
+    this._value = str + this._value + str;
   }
 }
 const builder = new StringBuilder(".");
