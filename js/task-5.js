@@ -64,8 +64,8 @@ class Car {
    */
   accelerate(value) {
     if (this.speed + value <= this.maxSpeed) {
-      return (this.speed += value);
-    } else return console.log("Скорость больше чем maxSpeed");
+      this.speed += value;
+    } else console.log("Скорость больше чем maxSpeed");
   }
 
   /*
@@ -74,8 +74,8 @@ class Car {
    */
   decelerate(value) {
     if (this.speed - value >= 0) {
-      return (this.speed -= value);
-    } else return console.log("Результирующая скорость меньше нуля");
+      this.speed -= value;
+    } else console.log("Результирующая скорость меньше нуля");
   }
 
   /*
