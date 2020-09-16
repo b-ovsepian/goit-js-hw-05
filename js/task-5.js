@@ -63,7 +63,7 @@ class Car {
    * не больше чем значение свойства maxSpeed
    */
   accelerate(value) {
-    if (value <= this.maxSpeed) {
+    if (this.speed + value <= this.maxSpeed) {
       return (this.speed += value);
     } else return console.log("Скорость больше чем maxSpeed");
   }
