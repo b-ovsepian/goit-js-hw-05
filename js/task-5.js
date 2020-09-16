@@ -44,7 +44,7 @@ class Car {
    * Записывает в свойство isOn значение true
    */
   turnOn() {
-    return (this.isOn = true);
+    this.isOn = true;
   }
 
   /*
@@ -53,7 +53,8 @@ class Car {
    * и сбрасывает текущую скорость в 0
    */
   turnOff() {
-    return (this.isOn = false);
+    this.isOn = false;
+    this.speed = 0;
   }
 
   /*
