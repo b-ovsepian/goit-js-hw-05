@@ -84,8 +84,8 @@ class Car {
    */
   drive(hours) {
     if (this.isOn) {
-      return (this.distance += hours * this.speed);
-    } else return console.log("Машина не заведена");
+      this.distance += hours * this.speed;
+    } else console.log("Машина не заведена");
   }
 }
 
